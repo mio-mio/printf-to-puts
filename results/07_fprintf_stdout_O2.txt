@@ -1,0 +1,13 @@
+0000000000001050 <main>:
+    1050:	48 83 ec 08          	sub    $0x8,%rsp
+    1054:	48 8b 0d bd 2f 00 00 	mov    0x2fbd(%rip),%rcx        # 4018 <stdout@GLIBC_2.2.5>
+    105b:	ba 06 00 00 00       	mov    $0x6,%edx
+    1060:	be 01 00 00 00       	mov    $0x1,%esi
+    1065:	48 8d 3d 98 0f 00 00 	lea    0xf98(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    106c:	e8 bf ff ff ff       	call   1030 <fwrite@plt>
+    1071:	31 c0                	xor    %eax,%eax
+    1073:	48 83 c4 08          	add    $0x8,%rsp
+    1077:	c3                   	ret
+    1078:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    107f:	00 
+

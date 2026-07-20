@@ -1,0 +1,10 @@
+0000000000001050 <main>:
+    1050:	48 83 ec 08          	sub    $0x8,%rsp
+    1054:	48 8d 3d a9 0f 00 00 	lea    0xfa9(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    105b:	31 c0                	xor    %eax,%eax
+    105d:	e8 ce ff ff ff       	call   1030 <printf@plt>
+    1062:	31 c0                	xor    %eax,%eax
+    1064:	48 83 c4 08          	add    $0x8,%rsp
+    1068:	c3                   	ret
+    1069:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+

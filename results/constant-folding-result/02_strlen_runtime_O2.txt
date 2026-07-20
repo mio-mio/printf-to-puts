@@ -1,0 +1,17 @@
+0000000000001060 <main>:
+    1060:	83 ff 01             	cmp    $0x1,%edi
+    1063:	7e 1f                	jle    1084 <main+0x24>
+    1065:	50                   	push   %rax
+    1066:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+    106a:	e8 c1 ff ff ff       	call   1030 <strlen@plt>
+    106f:	48 8d 3d 8e 0f 00 00 	lea    0xf8e(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    1076:	48 89 c6             	mov    %rax,%rsi
+    1079:	31 c0                	xor    %eax,%eax
+    107b:	e8 c0 ff ff ff       	call   1040 <printf@plt>
+    1080:	31 c0                	xor    %eax,%eax
+    1082:	5a                   	pop    %rdx
+    1083:	c3                   	ret
+    1084:	b8 01 00 00 00       	mov    $0x1,%eax
+    1089:	c3                   	ret
+    108a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+

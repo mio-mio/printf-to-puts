@@ -1,0 +1,43 @@
+0000000000001179 <main>:
+    1179:	55                   	push   %rbp
+    117a:	48 89 e5             	mov    %rsp,%rbp
+    117d:	48 83 ec 20          	sub    $0x20,%rsp
+    1181:	89 7d ec             	mov    %edi,-0x14(%rbp)
+    1184:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+    1188:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+    118c:	7f 07                	jg     1195 <main+0x1c>
+    118e:	b8 01 00 00 00       	mov    $0x1,%eax
+    1193:	eb 74                	jmp    1209 <main+0x90>
+    1195:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    1199:	48 83 c0 08          	add    $0x8,%rax
+    119d:	48 8b 00             	mov    (%rax),%rax
+    11a0:	48 89 c7             	mov    %rax,%rdi
+    11a3:	e8 a8 fe ff ff       	call   1050 <strlen@plt>
+    11a8:	48 83 c0 01          	add    $0x1,%rax
+    11ac:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    11b0:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    11b4:	48 89 c7             	mov    %rax,%rdi
+    11b7:	e8 b4 fe ff ff       	call   1070 <malloc@plt>
+    11bc:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+    11c0:	48 83 7d f0 00       	cmpq   $0x0,-0x10(%rbp)
+    11c5:	75 07                	jne    11ce <main+0x55>
+    11c7:	b8 01 00 00 00       	mov    $0x1,%eax
+    11cc:	eb 3b                	jmp    1209 <main+0x90>
+    11ce:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    11d2:	48 83 c0 08          	add    $0x8,%rax
+    11d6:	48 8b 08             	mov    (%rax),%rcx
+    11d9:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    11dd:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+    11e1:	48 89 ce             	mov    %rcx,%rsi
+    11e4:	48 89 c7             	mov    %rax,%rdi
+    11e7:	e8 74 fe ff ff       	call   1060 <memcpy@plt>
+    11ec:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+    11f0:	48 89 c7             	mov    %rax,%rdi
+    11f3:	e8 48 fe ff ff       	call   1040 <puts@plt>
+    11f8:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+    11fc:	48 89 c7             	mov    %rax,%rdi
+    11ff:	e8 2c fe ff ff       	call   1030 <free@plt>
+    1204:	b8 00 00 00 00       	mov    $0x0,%eax
+    1209:	c9                   	leave
+    120a:	c3                   	ret
+

@@ -1,0 +1,34 @@
+0000000000001090 <main>:
+    1090:	83 ff 01             	cmp    $0x1,%edi
+    1093:	7e 5e                	jle    10f3 <main+0x63>
+    1095:	53                   	push   %rbx
+    1096:	48 83 ec 10          	sub    $0x10,%rsp
+    109a:	48 8b 76 08          	mov    0x8(%rsi),%rsi
+    109e:	48 89 f7             	mov    %rsi,%rdi
+    10a1:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    10a6:	e8 a5 ff ff ff       	call   1050 <strlen@plt>
+    10ab:	48 8d 50 01          	lea    0x1(%rax),%rdx
+    10af:	48 89 d7             	mov    %rdx,%rdi
+    10b2:	48 89 14 24          	mov    %rdx,(%rsp)
+    10b6:	e8 b5 ff ff ff       	call   1070 <malloc@plt>
+    10bb:	48 89 c3             	mov    %rax,%rbx
+    10be:	48 85 c0             	test   %rax,%rax
+    10c1:	74 29                	je     10ec <main+0x5c>
+    10c3:	48 8b 14 24          	mov    (%rsp),%rdx
+    10c7:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    10cc:	48 89 c7             	mov    %rax,%rdi
+    10cf:	e8 8c ff ff ff       	call   1060 <memcpy@plt>
+    10d4:	48 89 df             	mov    %rbx,%rdi
+    10d7:	e8 64 ff ff ff       	call   1040 <puts@plt>
+    10dc:	48 89 df             	mov    %rbx,%rdi
+    10df:	e8 4c ff ff ff       	call   1030 <free@plt>
+    10e4:	31 c0                	xor    %eax,%eax
+    10e6:	48 83 c4 10          	add    $0x10,%rsp
+    10ea:	5b                   	pop    %rbx
+    10eb:	c3                   	ret
+    10ec:	b8 01 00 00 00       	mov    $0x1,%eax
+    10f1:	eb f3                	jmp    10e6 <main+0x56>
+    10f3:	b8 01 00 00 00       	mov    $0x1,%eax
+    10f8:	c3                   	ret
+    10f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+

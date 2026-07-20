@@ -1,0 +1,12 @@
+0000000000001139 <main>:
+    1139:	55                   	push   %rbp
+    113a:	48 89 e5             	mov    %rsp,%rbp
+    113d:	48 8d 05 c0 0e 00 00 	lea    0xec0(%rip),%rax        # 2004 <_IO_stdin_used+0x4>
+    1144:	be 41 00 00 00       	mov    $0x41,%esi
+    1149:	48 89 c7             	mov    %rax,%rdi
+    114c:	b8 00 00 00 00       	mov    $0x0,%eax
+    1151:	e8 da fe ff ff       	call   1030 <printf@plt>
+    1156:	b8 00 00 00 00       	mov    $0x0,%eax
+    115b:	5d                   	pop    %rbp
+    115c:	c3                   	ret
+

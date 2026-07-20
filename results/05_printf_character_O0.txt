@@ -1,0 +1,9 @@
+0000000000001139 <main>:
+    1139:	55                   	push   %rbp
+    113a:	48 89 e5             	mov    %rsp,%rbp
+    113d:	bf 41 00 00 00       	mov    $0x41,%edi
+    1142:	e8 e9 fe ff ff       	call   1030 <putchar@plt>
+    1147:	b8 00 00 00 00       	mov    $0x0,%eax
+    114c:	5d                   	pop    %rbp
+    114d:	c3                   	ret
+

@@ -1,0 +1,11 @@
+0000000000001050 <main>:
+    1050:	48 83 ec 18          	sub    $0x18,%rsp
+    1054:	48 8d 7c 24 0c       	lea    0xc(%rsp),%rdi
+    1059:	c7 44 24 0c 41 42 43 	movl   $0x434241,0xc(%rsp)
+    1060:	00 
+    1061:	e8 ca ff ff ff       	call   1030 <puts@plt>
+    1066:	31 c0                	xor    %eax,%eax
+    1068:	48 83 c4 18          	add    $0x18,%rsp
+    106c:	c3                   	ret
+    106d:	0f 1f 00             	nopl   (%rax)
+

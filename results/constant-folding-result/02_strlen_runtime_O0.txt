@@ -1,0 +1,26 @@
+0000000000001149 <main>:
+    1149:	55                   	push   %rbp
+    114a:	48 89 e5             	mov    %rsp,%rbp
+    114d:	48 83 ec 20          	sub    $0x20,%rsp
+    1151:	89 7d ec             	mov    %edi,-0x14(%rbp)
+    1154:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+    1158:	83 7d ec 01          	cmpl   $0x1,-0x14(%rbp)
+    115c:	7f 07                	jg     1165 <main+0x1c>
+    115e:	b8 01 00 00 00       	mov    $0x1,%eax
+    1163:	eb 37                	jmp    119c <main+0x53>
+    1165:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+    1169:	48 83 c0 08          	add    $0x8,%rax
+    116d:	48 8b 00             	mov    (%rax),%rax
+    1170:	48 89 c7             	mov    %rax,%rdi
+    1173:	e8 b8 fe ff ff       	call   1030 <strlen@plt>
+    1178:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    117c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1180:	48 8d 15 7d 0e 00 00 	lea    0xe7d(%rip),%rdx        # 2004 <_IO_stdin_used+0x4>
+    1187:	48 89 c6             	mov    %rax,%rsi
+    118a:	48 89 d7             	mov    %rdx,%rdi
+    118d:	b8 00 00 00 00       	mov    $0x0,%eax
+    1192:	e8 a9 fe ff ff       	call   1040 <printf@plt>
+    1197:	b8 00 00 00 00       	mov    $0x0,%eax
+    119c:	c9                   	leave
+    119d:	c3                   	ret
+

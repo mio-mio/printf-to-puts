@@ -1,0 +1,18 @@
+0000000000001149 <main>:
+    1149:	55                   	push   %rbp
+    114a:	48 89 e5             	mov    %rsp,%rbp
+    114d:	48 83 ec 10          	sub    $0x10,%rsp
+    1151:	c7 45 fc 41 42 43 00 	movl   $0x434241,-0x4(%rbp)
+    1158:	48 8d 4d fc          	lea    -0x4(%rbp),%rcx
+    115c:	48 8d 45 f8          	lea    -0x8(%rbp),%rax
+    1160:	ba 04 00 00 00       	mov    $0x4,%edx
+    1165:	48 89 ce             	mov    %rcx,%rsi
+    1168:	48 89 c7             	mov    %rax,%rdi
+    116b:	e8 d0 fe ff ff       	call   1040 <memcpy@plt>
+    1170:	48 8d 45 f8          	lea    -0x8(%rbp),%rax
+    1174:	48 89 c7             	mov    %rax,%rdi
+    1177:	e8 b4 fe ff ff       	call   1030 <puts@plt>
+    117c:	b8 00 00 00 00       	mov    $0x0,%eax
+    1181:	c9                   	leave
+    1182:	c3                   	ret
+

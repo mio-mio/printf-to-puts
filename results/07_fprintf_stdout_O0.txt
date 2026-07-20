@@ -1,0 +1,13 @@
+0000000000001139 <main>:
+    1139:	55                   	push   %rbp
+    113a:	48 89 e5             	mov    %rsp,%rbp
+    113d:	48 8b 05 d4 2e 00 00 	mov    0x2ed4(%rip),%rax        # 4018 <stdout@GLIBC_2.2.5>
+    1144:	48 8d 3d b9 0e 00 00 	lea    0xeb9(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+    114b:	48 89 c1             	mov    %rax,%rcx
+    114e:	ba 06 00 00 00       	mov    $0x6,%edx
+    1153:	be 01 00 00 00       	mov    $0x1,%esi
+    1158:	e8 d3 fe ff ff       	call   1030 <fwrite@plt>
+    115d:	b8 00 00 00 00       	mov    $0x0,%eax
+    1162:	5d                   	pop    %rbp
+    1163:	c3                   	ret
+
